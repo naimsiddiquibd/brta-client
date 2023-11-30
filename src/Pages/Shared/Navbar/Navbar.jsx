@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from 'react-icons/ai';
 import { BsFillCartFill, BsFillSaveFill } from 'react-icons/bs';
 import { TbTruckDelivery } from 'react-icons/tb'
-import { FaUserFriends, FaWallet } from 'react-icons/fa'
+import { FaUserFriends, FaWallet, FaHome } from 'react-icons/fa'
 import { MdFavorite, MdHelp } from 'react-icons/md'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
@@ -69,19 +69,9 @@ const Navbar = () => {
             </div>
             {/* Cart button */}
             <div className='flex items-center'>
-                <Link to="/login">
+                <Link to="/">
                     <button className=' text-black hidden md:flex items-center mr-8 cursor-pointer hover:text-gray-600'>
                         Home
-                    </button>
-                </Link>
-                <Link to="/login">
-                    <button className=' text-black hidden md:flex items-center mr-8 cursor-pointer hover:text-gray-600'>
-                        About
-                    </button>
-                </Link>
-                <Link to="/login">
-                    <button className=' text-black hidden md:flex items-center mr-8 cursor-pointer hover:text-gray-600'>
-                        Contact
                     </button>
                 </Link>
                 <Link to="/get-license">
@@ -104,9 +94,7 @@ const Navbar = () => {
                 ) : (
                     // If user is not available, show login button
                     <Link to="/login">
-                        <button className='text-black hidden md:flex items-center cursor-pointer hover:text-gray-600'>
-                            Login
-                        </button>
+                        <button className="btn btn-active bg-blue-400 text-white hidden md:flex items-center cursor-pointer hover:text-gray-600">Login</button>
                     </Link>
                 )}
             </div>
@@ -128,9 +116,9 @@ const Navbar = () => {
                 </h2>
                 <nav>
                     <ul className='flex flex-col p-4 text-gray-800'>
-                        <li className='text-xl py-4 flex'><TbTruckDelivery size={25} className='mr-4' /> Orders</li>
-                        <li className='text-xl py-4 flex'><MdFavorite size={25} className='mr-4' /> Favorites</li>
-                        <li className='text-xl py-4 flex'><FaWallet size={25} className='mr-4' /> Wallet</li>
+                        <li className='text-xl py-4 flex'><FaHome size={25} className='mr-4' /><Link to="/">Home</Link></li>
+                        <li className='text-xl py-4 flex'><MdFavorite size={25} className='mr-4' /> <Link to="/get-license">License Apply</Link></li>
+                        <li className='text-xl py-4 flex'><FaWallet size={25} className='mr-4' /> <Link to="/dashboard">Dashboard</Link></li>
                         <li className='text-xl py-4 flex'><MdHelp size={25} className='mr-4' /> Help</li>
                         <li className='text-xl py-4 flex'><AiFillTag size={25} className='mr-4' /> Promotions</li>
                         <li className='text-xl py-4 flex'><BsFillSaveFill size={25} className='mr-4' /> Best Ones</li>

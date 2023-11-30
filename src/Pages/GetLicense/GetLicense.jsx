@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
+import { BASE_URL } from '../../api/api';
 
 const GetLicense = () => {
     const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ const GetLicense = () => {
       const handleSubmit = async (e) => {
         e.preventDefault();
       
-        const apiEndpoint = 'https://brta-server.onrender.com/api/submit-license';
+        const apiEndpoint = `${BASE_URL}submit-license`;
       
         // Create FormData object to handle file uploads
         const formDataToSend = new FormData();
@@ -71,7 +72,7 @@ const GetLicense = () => {
             <form onSubmit={handleSubmit} className="max-w-3xl mx-auto">
                 <h2 className='text-2xl font-bold mb-3'>Apply For A License</h2>
                 <div className="divider"></div>
-                <div class="grid lg:grid-cols-2 lg:gap-4">
+                <div className="grid lg:grid-cols-2 lg:gap-4">
                     <div>
                         {/* Name */}
                         <div className="mb-4">

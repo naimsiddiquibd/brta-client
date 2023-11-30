@@ -7,7 +7,7 @@ const Hero = () => {
                 {/* Overlay */}
                 <div className='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center'>
                     <div className='flex items-center ml-10'>
-                        <img className='w-28 h-28' src="http://www.brta.gov.bd/themes/responsive_npf/img/logo/logo.png" />
+                        <img className='w-28 h-28' src="/logo.png" />
                         <div>
                             <h1 className='px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold'>Bangladesh Road Transport Authority</h1>
                      

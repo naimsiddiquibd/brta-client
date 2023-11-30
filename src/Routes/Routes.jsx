@@ -9,6 +9,7 @@ import GetLicense from "../Pages/GetLicense/GetLicense";
 import PrivateRoute from "./PrivateRoute";
 import Applicants from "../Pages/Applicants/Applicants";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import LicenseDetails from "../Pages/LicenseDetails/LicenseDetails";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -37,6 +38,10 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
         {
           path: "/dashboard",
           element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+        },
+        {
+          path: "/license/:id",
+          element: <PrivateRoute><LicenseDetails></LicenseDetails></PrivateRoute>,
         },
       ]
     },

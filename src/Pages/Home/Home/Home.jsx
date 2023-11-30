@@ -13,9 +13,9 @@ const Home = () => {
     ];
 
     const stuffs = [
-        { id: 1, title: 'Mirza Fakhrul', designation: "Genaral Secretary, BNP" },
-        { id: 2, title: 'Ruhul Kabir', designation: "Senior Leader, BNP" },
-        { id: 3, title: 'Mirza Abbas', designation: "Senior Leader, BNP" },
+        { id: 1, title: 'Naim Siddiqui', designation: "Genaral Secretary, UK" },
+        { id: 2, title: 'Jayed Khan', designation: "Senior Leader, UK" },
+        { id: 3, title: 'Ananta Jalil', designation: "Senior Leader, UK" },
     ];
 
     return (
@@ -29,8 +29,8 @@ const Home = () => {
                     <div className="lg:col-span-3">
                         {/* Pass the notices array to the Map component */}
                         <NoticeBoard notices={notices} />
-                        <div className='flex justify-center'>
-                            <div className='grid lg:grid-cols-3 lg:gap-3 lg:my-5 my-2'>
+                        <div className='flex justify-between'>
+                            <div className='grid lg:grid-cols-3 w-full lg:gap-3 lg:my-5 my-2'>
                             <InfoCard></InfoCard>
                             </div>
                         </div>
