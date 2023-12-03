@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import Applicants from "../Pages/Applicants/Applicants";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import LicenseDetails from "../Pages/LicenseDetails/LicenseDetails";
+import Test from "../Pages/Test/Test";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -26,6 +27,10 @@ import LicenseDetails from "../Pages/LicenseDetails/LicenseDetails";
         {
             path: "/signup",
             element: <Signup></Signup>
+        },
+        {
+          path: "/test",
+          element: <Test></Test>
         },
         {
           path: "/get-license",
